@@ -1,1 +1,1 @@
-# rsschool-cv
+https://Eol1881.github.io/rsschool-cv/cv
