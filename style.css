@@ -206,10 +206,20 @@ code, pre {
 
 .footer-github {
     align-self: center;
+    position: relative;
+    padding-left: 40px;
 }
 
-.footer-date {
-    text-align: center;
+.footer-github::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(assets/github-mark-white.svg);
+    background-size: cover;
+    border:solid 1px red;
 }
 
 .footer a {
