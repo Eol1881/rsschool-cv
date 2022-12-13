@@ -1,15 +1,13 @@
-.header {
-	top:20px;
+@font-face {
+	font-family: Ubuntu;
+		src: url("assets/fonts/Ubuntu-Regular.ttf");
 }
-
-.main {
-	padding-top:100px;
+body {
+	font-family: 'Ubuntu';
 }
-
-.posLeft {
-	margin-left:-66%;
-}
-
-.posCenter {
-	margin-left:33%;
+* {
+    box-sizing: border-box;
+  }
+body > * {
+	border: 1px solid red;
 }
