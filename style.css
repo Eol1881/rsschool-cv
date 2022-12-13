@@ -1,13 +1,270 @@
 @font-face {
-	font-family: Ubuntu;
-		src: url("assets/fonts/Ubuntu-Regular.ttf");
+    font-family: Ubuntu;
+        src: url("assets/fonts/Ubuntu-Regular.ttf");
 }
-body {
-	font-family: 'Ubuntu';
-}
+
+html {
+    scroll-behavior: smooth; /* плавный скроллинг при переходе на якорь*/
+  }
+
 * {
     box-sizing: border-box;
   }
-body > * {
-	border: 1px solid red;
+
+body {
+    font-family: 'Ubuntu';
+    color: blanchedalmond;
+
+    font-size: 22px;
+    line-height: 28px;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0; padding: 0;
+
+    background-color:#131516; /* #131516 */
 }
+
+body > * {
+    border: 1px solid red;	/*sdfsdf*/
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    border: 1px solid blue; /*sdfsdf*/
+    background-color:#4b799149; /* #151718 */
+  }
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    list-style: none;
+
+}
+
+.nav-item {
+    padding: 0 20px;
+    line-height: 50px;
+    border: 1px solid green; /*sdfsdf*/
+}
+
+.nav-link {
+    text-decoration: none;
+    color: bisque;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link::before {
+	content: '';
+	position: absolute;
+	left: 0; bottom: 8px;
+	width: 0%;
+	height: 2px;
+	background-color: yellow;
+    transition: .5s;
+}
+
+.nav-link:hover:before {
+	width: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.section {
+    width: 50%;
+    border: 1px dotted white;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    border: 1px solid orangered;
+    color: rgb(184, 164, 54);
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* HEADER SECTION */
+
+.name-container h1 {
+    display: block;
+    margin-bottom: 0;
+}
+
+.name-container p {
+    display: block;
+    margin-top: 10px;
+}
+
+/* ABOUT ME SECTION */
+
+#about-me div {
+    display: flex;
+}
+
+.my-photo {
+    border: 2px dotted green;
+    width: 50%;
+    height: auto;
+    border-radius: 10%;
+    float: left;
+    margin-right: 10px;
+
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#about-me p {
+    color: rgb(180, 173, 160);
+    border: 1px solid red;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+/* MY SKILLS SECTION */
+
+#skills ul {
+    color: rgb(180, 173, 160);
+    font-size: 22px;
+    line-height: 28px;
+    border: 1px solid red;
+    list-style-type: none;
+}
+
+#skills ul ul {
+    list-style-type: square;
+    font-style: italic;
+}
+
+#skills h3 {
+    margin: 0; padding: 0;
+    font-style: bold;
+}
+
+/* CONTACTS SECTION */
+
+#contacts {
+    line-height: 150%;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+#contacts a {
+    text-decoration: none;
+    color: rgb(202, 67, 33);
+}
+
+#contacts ul {
+    border: yellow 1px dotted;
+}
+
+/* CODE EXAMPLE SECTION */
+
+#code-example {
+    font-size: 28px;
+}
+
+code, pre {
+    border: solid 1px red;
+    padding: 0;
+    margin: 0;
+}
+
+/* EDUCATION SECTION */
+
+#education ul {
+    list-style-type: circle;
+}
+
+/* WORK EXPERIENCE SECTION */
+
+#experience p {
+    padding-left: 50px;
+}
+
+/* LANGUAGE SECTION */
+
+#language p {
+    padding-left: 50px;
+}
+
+/* FOOTER */
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .container * {
+    border: 1px solid green;
+}
+
+
+
+.footer-github {
+    align-self: center;
+}
+
+.footer-date {
+    text-align: center;
+}
+
+.footer-rsschool {
+
+}
+
+
+
+
+
+
+@media (max-width: 700px) {
+    .section {
+        width: 100%;
+    }
+
+    #about-me div {
+        display: block;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .section {
+    /*hfghfgh*/
+    color: aqua;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .section {
+    /*hfghfgh*/
+    color: aqua;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .section {
+    /*hfghfgh*/
+    color: aqua;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .section {
+    /*hfghfgh*/
+    color: aqua;
+    }
+  }
