@@ -14,18 +14,13 @@ html {
 body {
     font-family: 'Ubuntu';
     color: blanchedalmond;
-
     font-size: 22px;
     line-height: 28px;
-
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     margin: 0; padding: 0;
-
     background-color:#131516; /* #131516 */
 }
 
@@ -44,9 +39,7 @@ body > * {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
     list-style: none;
-
 }
 
 .nav-item {
@@ -120,7 +113,6 @@ body > * {
     border-radius: 10%;
     float: left;
     margin-right: 10px;
-
     display: block;
     max-width: 100%;
     max-height: 100%;
@@ -212,8 +204,6 @@ code, pre {
     border: 1px solid green;
 }
 
-
-
 .footer-github {
     align-self: center;
 }
@@ -222,6 +212,10 @@ code, pre {
     text-align: center;
 }
 
+.footer a {
+    text-decoration: none;
+    color: white;
+}
 
 
 
