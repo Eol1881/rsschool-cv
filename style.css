@@ -3,6 +3,7 @@
         src: url("assets/fonts/Ubuntu-Regular.ttf");
 }
 
+/* =============== OVERALL STYLES =============== */
 html {
     scroll-behavior: smooth; /* плавный скроллинг при переходе на якорь*/
   }
@@ -13,7 +14,7 @@ html {
 
 body {
     font-family: 'Ubuntu';
-    color: blanchedalmond;
+    color: #ffebcd;
     font-size: 22px;
     line-height: 28px;
     min-height: 100vh;
@@ -21,19 +22,52 @@ body {
     flex-direction: column;
     justify-content: space-between;
     margin: 0; padding: 0;
-    background-color:#131516; /* #131516 */
-}
-
-body > * {
-    border: 1px solid red;	/*sdfsdf*/
+    background-color:#0f2027;
 }
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
-    border: 1px solid blue; /*sdfsdf*/
-    background-color:#4b799149; /* #151718 */
-  }
+    background-color:#122a36;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    padding: 30px;
+    width: 50%;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #b8a436;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.section p,
+.section > ul {
+    background-color: #2a617c8e;  /* Background rectangles for content highlighting */
+    border-radius: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.section pre {
+    background-color: #0e14188e;  /* Background rectangles for code example highlighting */
+    border-radius: 15px;
+}
+
+/* =============== NAVIGATION =============== */
+.nav-container {
+    padding: 0;
+}
 
 .nav-list {
     display: flex;
@@ -45,93 +79,74 @@ body > * {
 .nav-item {
     padding: 0 20px;
     line-height: 50px;
-    border: 1px solid green; /*sdfsdf*/
 }
 
 .nav-link {
     text-decoration: none;
-    color: bisque;
+    color: #ffe4c4;
     position: relative;
     display: inline-block;
 }
 
 .nav-link::before {
-	content: '';
+	content: '';    /* Navigation link underline */
 	position: absolute;
 	left: 0; bottom: 8px;
 	width: 0%;
 	height: 2px;
-	background-color: yellow;
+	background-color: #ffff00;
     transition: .5s;
 }
 
 .nav-link:hover:before {
-	width: 100%;
+	width: 100%;    /* Navigation link underline */
 }
 
-.main-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-.section {
-    width: 50%;
-    border: 1px dotted white;
+#nav-menu-toggle {
+    position: absolute;
+    opacity: 0;    /* Hide menu triggering checkbox */
 }
 
-.section-title {
-    font-size: 32px;
-    font-weight: bold;
-    border: 1px solid orangered;
-    color: rgb(184, 164, 54);
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-/* HEADER SECTION */
-
-.name-container h1 {
+/* =============== NAME SECTION =============== */
+.name-container * {
     display: block;
     margin-bottom: 0;
-}
-
-.name-container p {
-    display: block;
     margin-top: 10px;
 }
 
-/* ABOUT ME SECTION */
+.name-container {
+    padding: 15px 15px 15px 55px;
+    margin-bottom: 15px;
+}
 
+/* =============== ABOUT ME SECTION =============== */
 #about-me div {
     display: flex;
 }
 
 .my-photo {
-    border: 2px dotted green;
     width: 50%;
     height: auto;
     border-radius: 10%;
     float: left;
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-left: 5px;
     display: block;
     max-width: 100%;
     max-height: 100%;
 }
 
 #about-me p {
-    color: rgb(180, 173, 160);
-    border: 1px solid red;
     font-size: 22px;
     line-height: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-/* MY SKILLS SECTION */
-
+/* =============== MY SKILLS SECTION =============== */
 #skills ul {
-    color: rgb(180, 173, 160);
     font-size: 22px;
     line-height: 28px;
-    border: 1px solid red;
     list-style-type: none;
 }
 
@@ -141,12 +156,12 @@ body > * {
 }
 
 #skills h3 {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     font-style: bold;
 }
 
-/* CONTACTS SECTION */
-
+/* =============== CONTACTS SECTION =============== */
 #contacts {
     line-height: 150%;
     font-size: 22px;
@@ -155,53 +170,61 @@ body > * {
 
 #contacts a {
     text-decoration: none;
-    color: rgb(202, 67, 33);
+    color: #ca4321;
 }
 
-#contacts ul {
-    border: yellow 1px dotted;
+/* =============== CODE EXAMPLE SECTION =============== */
+pre {
+    overflow-x: auto;
 }
 
-/* CODE EXAMPLE SECTION */
-
-#code-example {
+.code {
     font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
 }
 
-code, pre {
-    border: solid 1px red;
-    padding: 0;
-    margin: 0;
-}
-
-/* EDUCATION SECTION */
-
+/* =============== EDUCATION SECTION =============== */
 #education ul {
     list-style-type: circle;
 }
 
-/* WORK EXPERIENCE SECTION */
-
 #experience p {
-    padding-left: 50px;
+    font-style: italic;
+    padding-left: 35px;
 }
 
-/* LANGUAGE SECTION */
-
+/* =============== LANGUAGE SECTION =============== */
 #language p {
-    padding-left: 50px;
+    padding-left: 35px;
 }
 
-/* FOOTER */
+/* =============== PROJECTS SECTION =============== */
+#projects div {
+    background-color: #2a617c8e;  /* Background rectangles for content highlighting */
+    border-radius: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 35px;
+    margin-top: 1em;  /* Same as the default <p> margin-top */
+}
 
+#projects a {
+    font-style: italic;
+    color: #2AABBA;
+}
+
+#projects a:hover {
+    color: #C9D414;
+ }
+
+
+/* =============== FOOTER =============== */
 .footer .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.footer .container * {
-    border: 1px solid green;
+    background-color: #0f2027;
 }
 
 .footer-github {
@@ -219,54 +242,118 @@ code, pre {
     height: 32px;
     background-image: url(assets/github-mark-white.svg);
     background-size: cover;
-    border:solid 1px red;
 }
 
 .footer a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
+/* +++++ Adaptive navigation menu behaviour +++++ */
+@media (max-width: 1200px) {
+    /* =============== Button parameters =============== */
+    .nav-menu-button {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 1;
+        visibility: visible;
+    }
+    /* =============== Button visual condition default =============== */
+    .nav-menu-button > span,
+    .nav-menu-button > span::before,
+    .nav-menu-button > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #ffff00;
+        transition-duration: .25s;
+    }
+    .nav-menu-button > span::before {
+        content: '';
+        top: -16px;
+    }
+    .nav-menu-button > span::after {
+        content: '';
+        top: 16px;
+    }
+    /* =============== Button visual condition activated =============== */
+    #nav-menu-toggle:checked ~ .nav-menu-button > span {
+        transform: rotate(45deg);
+        background-color: #ffff00;
+    }
+    #nav-menu-toggle:checked ~ .nav-menu-button > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #nav-menu-toggle:checked ~ .nav-menu-button > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #nav-menu-toggle:checked ~ .nav-list {
+        right: 0;
+        visibility: visible;
+    }
+    /* =============== Navigation drop-down list =============== */
+    .nav-list {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #21a6e9;
+        transition-duration: .25s;
+    }
+    /* =============== Navigation drop-down item =============== */
+    .nav-item a {
+        display: block;
+    }
+    .nav-item {
+        padding: 12px 24px;
+        color: rgb(19, 6, 6); /*#333*/
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .nav-item:hover {
+        background-color: #0f1f53c0; /*#CFD8DC*/
+    }
+    .nav-item a:hover {
+        color: #ffff00;
+    }
+    /* =============== Disable navigation item underline =============== */
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        left: 0; bottom: 8px;
+        width: 0%;
+        height: 2px;
+        background-color: #ffff00;
+        transition: .5s;
+    }
+    .nav-link:hover:before {
+        width: 0%;
+    }
+}
 
-
-
-
-
-
-@media (max-width: 700px) {
+/* +++++ Adaptive page width +++++ */
+@media (max-width: 850px) {
     .section {
         width: 100%;
     }
-
     #about-me div {
         display: block;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .section {
-    /*hfghfgh*/
-    color: aqua;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .section {
-    /*hfghfgh*/
-    color: aqua;
-    }
-  }
-
-  @media (max-width: 360px) {
-    .section {
-    /*hfghfgh*/
-    color: aqua;
-    }
-  }
-
-  @media (max-width: 300px) {
-    .section {
-    /*hfghfgh*/
-    color: aqua;
     }
   }

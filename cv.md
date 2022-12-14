@@ -1,13 +1,15 @@
 # **Ivan Ivanov**
 -----------
 ## Contact information:
-* **Discord:** Ivan@test#1499
+* **Discord:** Eol#5428
 * **Skype:** bestfilesharingservice339
-* **Email:** 02f1881@gmail.com
+* **Email:** riot.games@gmail.com
 * **ICQ:** 40
 
 ## About me:
-I'm changing my life and field of activity to web development. Since childhood, I have been drawn to electronics and computers. I like to disassemble, rebuild and configure things. I am an experienced PC user. Fast learner - this шn my opinion is my most valuable personal quality. I want to become a full-stack JavaScript developer, and I will achieve this goal despite any difficulties and obstacles.
+I'm changing my life and field of activity to web development. Since childhood, I have been drawn to electronics and computers.
+I like to disassemble, rebuild and configure things. I am an experienced PC user. Fast learner - this is my most valuable personal quality.
+I want to become a full-stack JavaScript developer, and I will achieve this goal despite any difficulties and obstacles.
 
 ## Skills:
 * HTML5, CSS3
@@ -17,9 +19,8 @@ I'm changing my life and field of activity to web development. Since childhood, 
 
 ## Code example:
 ```
-function nothing_yet
-{
-    Hello World!
+function mult (a, b) {
+    return a*b;
 }
 ```
 
