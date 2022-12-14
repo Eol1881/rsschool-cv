@@ -1,0 +1,359 @@
+@font-face {
+    font-family: Ubuntu;
+        src: url("assets/fonts/Ubuntu-Regular.ttf");
+}
+
+/* =============== OVERALL STYLES =============== */
+html {
+    scroll-behavior: smooth; /* плавный скроллинг при переходе на якорь*/
+  }
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Ubuntu';
+    color: #ffebcd;
+    font-size: 22px;
+    line-height: 28px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0; padding: 0;
+    background-color:#0f2027;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color:#122a36;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    padding: 30px;
+    width: 50%;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #b8a436;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.section p,
+.section > ul {
+    background-color: #2a617c8e;  /* Background rectangles for content highlighting */
+    border-radius: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.section pre {
+    background-color: #0e14188e;  /* Background rectangles for code example highlighting */
+    border-radius: 15px;
+}
+
+/* =============== NAVIGATION =============== */
+.nav-container {
+    padding: 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item {
+    padding: 0 20px;
+    line-height: 50px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffe4c4;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link::before {
+	content: '';    /* Navigation link underline */
+	position: absolute;
+	left: 0; bottom: 8px;
+	width: 0%;
+	height: 2px;
+	background-color: #ffff00;
+    transition: .5s;
+}
+
+.nav-link:hover:before {
+	width: 100%;    /* Navigation link underline */
+}
+
+#nav-menu-toggle {
+    position: absolute;
+    opacity: 0;    /* Hide menu triggering checkbox */
+}
+
+/* =============== NAME SECTION =============== */
+.name-container * {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.name-container {
+    padding: 15px 15px 15px 55px;
+    margin-bottom: 15px;
+}
+
+/* =============== ABOUT ME SECTION =============== */
+#about-me div {
+    display: flex;
+}
+
+.my-photo {
+    width: 50%;
+    height: auto;
+    border-radius: 10%;
+    float: left;
+    margin-right: 15px;
+    margin-left: 5px;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#about-me p {
+    font-size: 22px;
+    line-height: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* =============== MY SKILLS SECTION =============== */
+#skills ul {
+    font-size: 22px;
+    line-height: 28px;
+    list-style-type: none;
+}
+
+#skills ul ul {
+    list-style-type: square;
+    font-style: italic;
+}
+
+#skills h3 {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* =============== CONTACTS SECTION =============== */
+#contacts {
+    line-height: 150%;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+#contacts a {
+    text-decoration: none;
+    color: #ca4321;
+}
+
+/* =============== CODE EXAMPLE SECTION =============== */
+pre {
+    overflow-x: auto;
+}
+
+.code {
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+/* =============== EDUCATION SECTION =============== */
+#education ul {
+    list-style-type: circle;
+}
+
+#experience p {
+    font-style: italic;
+    padding-left: 35px;
+}
+
+/* =============== LANGUAGE SECTION =============== */
+#language p {
+    padding-left: 35px;
+}
+
+/* =============== PROJECTS SECTION =============== */
+#projects div {
+    background-color: #2a617c8e;  /* Background rectangles for content highlighting */
+    border-radius: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 35px;
+    margin-top: 1em;  /* Same as the default <p> margin-top */
+}
+
+#projects a {
+    font-style: italic;
+    color: #2AABBA;
+}
+
+#projects a:hover {
+    color: #C9D414;
+ }
+
+
+/* =============== FOOTER =============== */
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0f2027;
+}
+
+.footer-github {
+    align-self: center;
+    position: relative;
+    padding-left: 40px;
+}
+
+.footer-github::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -3px;
+    width: 32px;
+    height: 32px;
+    background-image: url(assets/github-mark-white.svg);
+    background-size: cover;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* +++++ Adaptive navigation menu behaviour +++++ */
+@media (max-width: 1200px) {
+    /* =============== Button parameters =============== */
+    .nav-menu-button {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 1;
+        visibility: visible;
+    }
+    /* =============== Button visual condition default =============== */
+    .nav-menu-button > span,
+    .nav-menu-button > span::before,
+    .nav-menu-button > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #ffff00;
+        transition-duration: .25s;
+    }
+    .nav-menu-button > span::before {
+        content: '';
+        top: -16px;
+    }
+    .nav-menu-button > span::after {
+        content: '';
+        top: 16px;
+    }
+    /* =============== Button visual condition activated =============== */
+    #nav-menu-toggle:checked ~ .nav-menu-button > span {
+        transform: rotate(45deg);
+        background-color: #ffff00;
+    }
+    #nav-menu-toggle:checked ~ .nav-menu-button > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #nav-menu-toggle:checked ~ .nav-menu-button > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #nav-menu-toggle:checked ~ .nav-list {
+        right: 0;
+        visibility: visible;
+    }
+    /* =============== Navigation drop-down list =============== */
+    .nav-list {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #21a6e9;
+        transition-duration: .25s;
+    }
+    /* =============== Navigation drop-down item =============== */
+    .nav-item a {
+        display: block;
+    }
+    .nav-item {
+        padding: 12px 24px;
+        color: rgb(19, 6, 6); /*#333*/
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .nav-item:hover {
+        background-color: #0f1f53c0; /*#CFD8DC*/
+    }
+    .nav-item a:hover {
+        color: #ffff00;
+    }
+    /* =============== Disable navigation item underline =============== */
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        left: 0; bottom: 8px;
+        width: 0%;
+        height: 2px;
+        background-color: #ffff00;
+        transition: .5s;
+    }
+    .nav-link:hover:before {
+        width: 0%;
+    }
+}
+
+/* +++++ Adaptive page width +++++ */
+@media (max-width: 850px) {
+    .section {
+        width: 100%;
+    }
+    #about-me div {
+        display: block;
+    }
+  }
